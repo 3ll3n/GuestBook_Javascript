@@ -16,7 +16,7 @@ var storage = multer.diskStorage({
   });
 var upload = multer({ storage: storage });
 
-var Entries = require('../client/src/models/entries')();
+// var Entries = require('../client/src/models/entries')();
 
 var Entry = require('../client/src/models/entry');
 
@@ -48,5 +48,11 @@ guestbookRouter.get('/entries', function(req, res) {
     res.json(results);
   });
 });
+
+// guestbookRouter.delete('/entries/:id', function(req, res) {
+//   query.all(function(results) {
+//     res.json(results);
+//   });
+// });
 
 module.exports = guestbookRouter;
