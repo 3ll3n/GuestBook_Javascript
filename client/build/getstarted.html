@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Get Started</title>
-<link rel="stylesheet" type="text/css" href="./stylesheets/getstarted.css">
-<script src="bundle.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Started</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/getstarted.css">
+  <script src="bundle.js"></script>
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/guestbook">Get Started</a></li>
-      <li><a href="/guestbook/viewall">View All</a></li>
-    </ul>
-  </nav>
+  <div id="nav-container">
+    <nav id="top-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/guestbook">Get Started</a></li>
+        <li><a href="/guestbook/viewall">View All</a></li>
+      </ul>
+    </nav>
+  </div>
   
   <form action="guestbook/create" method="POST" enctype="multipart/form-data">
-  <input type="text" name="message" placeholder="Enter your message here: " />
-  <input type="file" name="image" />
-  <button type="submit">Submit</button>
+    <input type="text" name="message" placeholder="Enter your message here: " />
+    <input type="file" name="image" />
+    <button type="submit">Submit</button>
   </form>
 
 </body>
