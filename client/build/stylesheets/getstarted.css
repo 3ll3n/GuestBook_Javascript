@@ -39,3 +39,24 @@ nav a:hover {
 #top-nav {
   margin: 0px;
 }
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#form-container, input {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  opacity: 0.95;
+}
+
+#form-container, button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  opacity: 0.95;
+}
