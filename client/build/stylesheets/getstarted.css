@@ -41,6 +41,12 @@ nav a:hover {
   margin: 0px;
 }
 
+#title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 #form-container {
   display: flex;
   justify-content: center;

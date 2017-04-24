@@ -49,15 +49,19 @@ nav a:hover {
 
 /*styling for entries*/
 
+#all-entries {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 100%;
+}
 
+.entry-container {
+  flex-basis: 50%;
+}
 
-/*#all-entries
-
-#entry-container {
-  
-}*/
-
-#entry-list, img {
+.entry-container img {
   height: 200px;
   width: 200px;
 }
+
