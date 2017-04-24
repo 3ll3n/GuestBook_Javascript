@@ -1,0 +1,9 @@
+/*thanks to Emile Perron for the stunning image - located on Unsplash.com*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../img/emile-perron-190221.jpg');
+  background-size: cover;
+  margin: 0px;
+}

@@ -1,7 +1,11 @@
+/*thanks to Federico Beccari for the stunning image - located on Unsplash.com*/
+
 body {
   margin: 0;
   padding: 0;
-  background-color: lightblue;
+  background: url('../img/federico-beccari-62960.jpg');
+  background-size: cover;
+  margin: 0px;
 }
 
 #nav-container ul {
