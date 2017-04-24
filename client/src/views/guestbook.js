@@ -10,6 +10,7 @@ Guestbook.prototype = {
     for(var entry of entries) {
       var divContainer = document.createElement("div");
       divContainer.setAttribute("class", "entry-container");
+      
       var contentDiv = document.createElement("div");
       contentDiv.setAttribute("class", "entry-list");
 
@@ -20,8 +21,13 @@ Guestbook.prototype = {
       divMessage.innerHTML = "<p>" + entry.message + "</p>";
       divMessage.setAttribute("class", "entry-message"); 
 
+      var button = document.createElement("button");
+      button.type = "submit";
+      button.innerText = "Delete entry";
+
       contentDiv.appendChild(divImage);
       contentDiv.appendChild(divMessage);
+      contentDiv.appendChild(button);
       divContainer.appendChild(contentDiv);
       container.appendChild(divContainer);
     }

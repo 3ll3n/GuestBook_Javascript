@@ -35,3 +35,18 @@ nav a:hover {
   display: flex;
   justify-content: center;
 }
+
+/*styling for entries*/
+
+
+
+/*#all-entries
+
+#entry-container {
+  
+}*/
+
+#entry-list, img {
+  height: 200px;
+  width: 200px;
+}
