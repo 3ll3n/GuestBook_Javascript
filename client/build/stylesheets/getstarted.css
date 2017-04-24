@@ -33,7 +33,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: lightblue;
+  color: orange;
   transition: .5s background-color;
 }
 
