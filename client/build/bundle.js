@@ -144,6 +144,7 @@ Guestbook.prototype = {
 
       var image = document.createElement("img");
       image.src = '../' + entry.image;
+      image.setAttribute("class", "img-rounded")
 
       var message = document.createElement("p");
       message.innerHTML = entry.message;

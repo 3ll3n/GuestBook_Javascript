@@ -34,6 +34,7 @@ nav a {
 
 nav a:hover {
   color: orange;
+  text-decoration: none;
   transition: .5s background-color;
 }
 
@@ -52,11 +53,19 @@ nav a:hover {
 #all-entries {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .entry-container img {
   height: 250px;
   width: 200px;
+}
+
+button {
+  border-radius: 5px;
+  background-color: orange;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  opacity: 0.88;
 }
 
