@@ -156,6 +156,7 @@ Guestbook.prototype = {
         var request = new XMLHttpRequest();
         request.open("POST", "/guestbook/entries/" + entry._id);
         request.send();
+        window.location.reload(true);
       }
 
       divContainer.appendChild(image);
