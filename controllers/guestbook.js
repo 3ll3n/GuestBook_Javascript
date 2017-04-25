@@ -59,10 +59,8 @@ guestbookRouter.get('/entries/:id', function(req, res) {
 
  // delete by id
 
- guestbookRouter.delete('/entries/:id', function(req,res) {
-  query.deleteById(req.params.id, function(results) {
-    res.json(results);
-  });
+ guestbookRouter.post('/entries/:id', function(req,res) {
+  query.deleteById(req.params.id);
 });
 
 // delete all

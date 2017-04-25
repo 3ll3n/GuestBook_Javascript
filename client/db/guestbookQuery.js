@@ -33,17 +33,16 @@ GuestbookQuery.prototype = {
       }
     });
   },
-  deleteById: function(id, onQueryFinished) {
+  deleteById: function(id) {
     MongoClient.connect(this.url, function(err, db) {
       if(db) {
         var collection = db.collection('entries');
-        collection.remove({_id: new Object(id)}).toArray(function(err, docs) {
-          onQueryFinished(docs);
-        });
-      }
-    });
+        collection.remove({_id: new ObjectID(id)});
+        };
+      });
+   
+    }
   }
-};
 
 
 module.exports = GuestbookQuery;

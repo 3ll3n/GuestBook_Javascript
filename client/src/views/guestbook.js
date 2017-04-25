@@ -21,8 +21,11 @@ Guestbook.prototype = {
 
       var button = document.createElement("button");
       button.innerText = "Delete entry";
+      
       button.onclick = function() {
-        
+        var request = new XMLHttpRequest();
+        request.open("POST", "/guestbook/entries/" + entry._id);
+        request.send();
       }
 
       divContainer.appendChild(image);
