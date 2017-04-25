@@ -49,10 +49,23 @@ guestbookRouter.get('/entries', function(req, res) {
   });
 });
 
-// guestbookRouter.delete('/entries/:id', function(req, res) {
-//   query.all(function(results) {
-//     res.json(results);
-//   });
-// });
+// get by id
+
+guestbookRouter.get('/entries/:id', function(req, res) {
+  query.findById(req.params.id, function(results) {
+    res.json(results);
+  });
+});
+
+ // delete by id
+
+ guestbookRouter.delete('/entries/:id', function(req,res) {
+  query.deleteById(req.params.id, function(results) {
+    res.json(results);
+  });
+});
+
+// delete all
+
 
 module.exports = guestbookRouter;

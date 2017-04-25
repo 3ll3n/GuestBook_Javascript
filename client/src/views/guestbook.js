@@ -8,6 +8,7 @@ Guestbook.prototype = {
   render: function(entries) {
     var container = document.getElementById("all-entries");
     for(var entry of entries) {
+      console.log(entry);
       var divContainer = document.createElement("div");
       divContainer.setAttribute("class", "entry-container");
 
@@ -19,10 +20,9 @@ Guestbook.prototype = {
       message.setAttribute("class", "entry-message"); 
 
       var button = document.createElement("button");
-      button.type = "submit";
       button.innerText = "Delete entry";
-      button.onClick = function() {
-
+      button.onclick = function() {
+        
       }
 
       divContainer.appendChild(image);

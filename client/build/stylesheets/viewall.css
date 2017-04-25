@@ -52,16 +52,11 @@ nav a:hover {
 #all-entries {
   display: flex;
   justify-content: space-around;
-  flex-flow: row wrap;
   width: 100%;
 }
 
-.entry-container {
-  flex-basis: 50%;
-}
-
 .entry-container img {
-  height: 200px;
+  height: 250px;
   width: 200px;
 }
 
