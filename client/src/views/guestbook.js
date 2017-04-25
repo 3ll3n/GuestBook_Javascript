@@ -21,13 +21,17 @@ Guestbook.prototype = {
 
       var button = document.createElement("button");
       button.innerText = "Delete entry";
-      
-      button.onclick = function() {
-        var request = new XMLHttpRequest();
-        request.open("POST", "/guestbook/entries/" + entry._id);
-        request.send();
-        window.location.reload(true);
-      }
+
+      button.onclick = (function(){
+        var entryId = entry._id;
+
+        return function() {
+          var request = new XMLHttpRequest();
+          request.open("POST", "/guestbook/entries/" + entryId);
+          request.send();
+          window.location.reload(true);
+        }
+      })();
 
       divContainer.appendChild(image);
       divContainer.appendChild(message);
@@ -43,7 +47,7 @@ Guestbook.prototype = {
 
 window.onload = function() {
   var guestbook = new Guestbook();
-   guestbook.viewAllEntries();
+  guestbook.viewAllEntries();
 };
 
 
