@@ -14,6 +14,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+  color: white;
 }
 
 #form-container {
@@ -39,6 +40,7 @@ body {
 
 #orange {
   background: orange;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .message {
@@ -54,6 +56,7 @@ body {
   justify-content: center;
   width: 100%;
   opacity: 0.8;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 
