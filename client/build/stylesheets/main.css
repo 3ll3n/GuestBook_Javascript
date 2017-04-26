@@ -35,4 +35,5 @@ nav a:hover {
 
 button {
   background: orange !important;
+  text-shadow: none !important;
 }

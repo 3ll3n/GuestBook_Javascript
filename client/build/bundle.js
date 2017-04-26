@@ -63,27 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Guestbook = __webpack_require__(1);
-
-var App = function() {
-
-  var guestbook = new Guestbook();
-  guestbook.viewAllEntries();
-
-}
-
-window.onload = App;
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Entries = __webpack_require__(2);
@@ -137,6 +121,22 @@ Guestbook.prototype = {
 module.exports = Guestbook;
 
 
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Guestbook = __webpack_require__(0);
+
+var App = function() {
+
+  var guestbook = new Guestbook();
+  guestbook.viewAllEntries();
+
+}
+
+window.onload = App;
 
 
 /***/ }),
