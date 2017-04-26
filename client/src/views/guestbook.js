@@ -30,7 +30,7 @@ Guestbook.prototype = {
           var request = new XMLHttpRequest();
           request.open("POST", "/guestbook/entries/" + entryId);
           request.send();
-          window.location.reload(true);
+          window.location.reload();
         }
       })();
 
