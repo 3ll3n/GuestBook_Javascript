@@ -63,125 +63,21 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Entry = __webpack_require__(1);
-
-var Entries = function() {
-
-}
-
-Entries.prototype = {
-  makeRequest: function(url, callback) {
-    var request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.onload = callback;
-    request.send();
-  },
-  all: function(callback) {
-    this.makeRequest("http://localhost:3000/guestbook/entries", function() {
-      if(this.status !==200) return;
-      var jsonString = this.responseText;
-      var results = JSON.parse(jsonString);
-
-      var entries = Entries.prototype.populateEntries(results);
-        callback(entries);
-    });
-  },
-    populateEntries: function(results) {
-      var entries = [];
-      results.forEach(function(result) {
-        var entry = new Entry(result);
-        entries.push(entry);
-      });
-      return entries;
-    },
-    makePostRequest: function(url, callback, payload) {
-      var request = new XMLHttpRequest();
-      request.open("POST", url);
-      request.setRequestHeader("Content-type", "application/json");
-      request.onload = callback;
-      request.send(payload);
-    }
-};
-
-module.exports = Entries;
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
-var Entry = function(options) {
-  this._id = options._id;
-  this.image = options.image;
-  this.message = options.message;
-}
+var App = function() {
 
-module.exports = Entry;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Entries = __webpack_require__(0);
-
-var Guestbook = function() {
-
-}
-
-Guestbook.prototype = {
-  render: function(entries) {
-    var container = document.getElementById("all-entries");
-    for(var entry of entries) {
-      console.log(entry);
-      var divContainer = document.createElement("div");
-      divContainer.setAttribute("class", "entry-container");
-
-      var image = document.createElement("img");
-      image.src = '../' + entry.image;
-      image.setAttribute("class", "img-rounded")
-
-      var message = document.createElement("p");
-      message.innerHTML = entry.message;
-      message.setAttribute("class", "entry-message"); 
-
-      var button = document.createElement("button");
-      button.innerText = "Delete entry";
-
-      button.onclick = (function(){
-        var entryId = entry._id;
-
-        return function() {
-          var request = new XMLHttpRequest();
-          request.open("POST", "/guestbook/entries/" + entryId);
-          request.send();
-          window.location.reload(true);
-        }
-      })();
-
-      divContainer.appendChild(image);
-      divContainer.appendChild(message);
-      divContainer.appendChild(button);
-      container.appendChild(divContainer);
-    }
-  },
-  viewAllEntries: function() {
-    var entries = new Entries();
-    entries.all(this.render);
-  }
-}
-
-window.onload = function() {
   var guestbook = new Guestbook();
   guestbook.viewAllEntries();
-};
 
+}
 
+window.onload = App;
 
 
 /***/ })

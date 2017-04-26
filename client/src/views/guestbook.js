@@ -46,9 +46,6 @@ Guestbook.prototype = {
   }
 }
 
-window.onload = function() {
-  var guestbook = new Guestbook();
-  guestbook.viewAllEntries();
-};
+module.exports = Guestbook;
 
 
